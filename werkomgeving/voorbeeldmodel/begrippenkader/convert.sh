@@ -25,7 +25,7 @@ if [ ! -f "../../libs/skos2graphml.xsl" ]; then
 fi
 
 # Convert: .xlsx to .ttl (csv in rdf)
-java -jar ../../libs/excel2rdf.jar Fietsenwinkel.xlsx fietsenwinkel-csv.ttl
+java -jar ../../libs/excel2rdf.jar -i Fietsenwinkel.xlsx -o fietsenwinkel-csv.ttl
 # Convert: csv in rdf to skos
 java -jar ../../libs/rdf2rdf.jar -i fietsenwinkel-csv.ttl -o fietsenwinkel-skos.ttl -c ../../libs/csv2skos.yaml
 # - Publicatie
