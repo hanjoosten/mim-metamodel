@@ -21,8 +21,21 @@ if [ ! -f "../../libs/dct2md.xsl" ]; then
   curl -L -k https://raw.githubusercontent.com/architolk/rdf2xml/refs/heads/main/dct2md.xsl -o ../../libs/dct2md.xsl
 fi
 if [ ! -f "../../libs/skos2graphml.xsl" ]; then
-  curl -L -k https://raw.githubusercontent.com/architolk/rdf2xml/refs/heads/main/dct2md.xsl -o ../../libs/skos2graphml.xsl
+  curl -L -k https://raw.githubusercontent.com/architolk/rdf2xml/refs/heads/main/skos2graphml.xsl -o ../../libs/skos2graphml.xsl
 fi
+
+# if [ ! -f "../../libs/rdf2graphml.xsl" ]; then
+#   curl -L -k https://raw.githubusercontent.com/architolk/rdf2xml/refs/heads/main/rdf2graphml.xsl -o ../../libs/rdf2graphml.xsl
+# fi
+# if [ ! -f "../../libs/rdf2md.xsl" ]; then
+#   curl -L -k https://raw.githubusercontent.com/architolk/rdf2xml/refs/heads/main/rdf2md.xsl -o ../../libs/rdf2md.xsl
+# fi
+# if [ ! -f "../../libs/rdf2uml-graphml.xsl" ]; then
+#   curl -L -k https://raw.githubusercontent.com/architolk/rdf2xml/refs/heads/main/rdf2uml-graphml.xsl -o ../../libs/rdf2uml-graphml.xsl
+# fi
+# if [ ! -f "../../libs/skos2alt-graphml.xsl" ]; then
+#   curl -L -k https://raw.githubusercontent.com/architolk/rdf2xml/refs/heads/main/skos2alt-graphml.xsl -o ../../libs/skos2alt-graphml.xsl
+# fi
 
 # Convert: .xlsx to .ttl (csv in rdf)
 java -jar ../../libs/excel2rdf.jar -i Fietsenwinkel.xlsx -o fietsenwinkel-csv.ttl
